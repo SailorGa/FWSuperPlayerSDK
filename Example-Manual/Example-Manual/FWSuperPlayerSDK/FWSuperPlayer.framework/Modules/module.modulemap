@@ -1,0 +1,6 @@
+framework module FWSuperPlayer {
+  umbrella header "FWSuperPlayer.h"
+
+  export *
+  module * { export * }
+}
