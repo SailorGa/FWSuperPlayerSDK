@@ -1,5 +1,5 @@
 PODS:
-  - FWSuperPlayerSDK (1.0.0)
+  - FWSuperPlayerSDK (1.1.0)
 
 DEPENDENCIES:
   - FWSuperPlayerSDK (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FWSuperPlayerSDK: 269727ac77a8daa0ea805740f5f2a8d2c44507ab
+  FWSuperPlayerSDK: 4c6f655bae3ca66a2234bac58a5e06995ea5658f
 
 PODFILE CHECKSUM: 67dc77060ebdeeb56e20dc15abb7a532a7419f71
 

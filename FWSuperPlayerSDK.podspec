@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FWSuperPlayerSDK'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = '超级播放器SDK'
   
   # This description is used to generate tags and improve search results.

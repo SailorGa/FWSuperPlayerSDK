@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,15 +17,108 @@
                         <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kYj-Rk-ftb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_home_backdrop" translatesAutoresizingMaskIntoConstraints="NO" id="uvc-rO-bGc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSm-Bt-WSB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sSm-Bt-WSB" secondAttribute="height" multiplier="4:3" id="SmH-3u-0GI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMi-7V-krH">
+                                <rect key="frame" x="15" y="563" width="105" height="44"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.1450980392" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6m6-IT-9zx"/>
+                                </constraints>
+                                <state key="normal" title="结束播放">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="stopPlayAction:" destination="whP-gf-Uak" eventType="touchUpInside" id="jNq-Xd-RFo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6T-kR-o6M">
+                                <rect key="frame" x="135" y="563" width="105" height="44"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.1450980392" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="直播播放">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="liveStartPlayAction:" destination="whP-gf-Uak" eventType="touchUpInside" id="4HX-aM-hRJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVK-vr-iF9">
+                                <rect key="frame" x="255" y="563" width="105" height="44"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.1450980392" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="点播播放">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="vodStartPlayAction:" destination="whP-gf-Uak" eventType="touchUpInside" id="g1U-RC-8ZN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QYZ-2b-UBq"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uvc-rO-bGc" secondAttribute="bottom" id="7v5-Rh-FTI"/>
+                            <constraint firstItem="sSm-Bt-WSB" firstAttribute="top" secondItem="kYj-Rk-ftb" secondAttribute="top" id="9Nf-Ns-hgO"/>
+                            <constraint firstItem="CVK-vr-iF9" firstAttribute="width" secondItem="zMi-7V-krH" secondAttribute="width" id="Aqe-4V-Tit"/>
+                            <constraint firstItem="E6T-kR-o6M" firstAttribute="height" secondItem="zMi-7V-krH" secondAttribute="height" id="BMc-wE-eiQ"/>
+                            <constraint firstItem="CVK-vr-iF9" firstAttribute="height" secondItem="zMi-7V-krH" secondAttribute="height" id="JLd-g8-JCQ"/>
+                            <constraint firstItem="E6T-kR-o6M" firstAttribute="leading" secondItem="zMi-7V-krH" secondAttribute="trailing" constant="15" id="JXk-pj-sJZ"/>
+                            <constraint firstItem="E6T-kR-o6M" firstAttribute="centerY" secondItem="zMi-7V-krH" secondAttribute="centerY" id="RCa-wE-21r"/>
+                            <constraint firstItem="E6T-kR-o6M" firstAttribute="width" secondItem="zMi-7V-krH" secondAttribute="width" id="TKZ-3C-lUh"/>
+                            <constraint firstAttribute="trailing" secondItem="uvc-rO-bGc" secondAttribute="trailing" id="VDU-0Z-fv1"/>
+                            <constraint firstItem="QYZ-2b-UBq" firstAttribute="trailing" secondItem="CVK-vr-iF9" secondAttribute="trailing" constant="15" id="dMA-ti-QA8"/>
+                            <constraint firstItem="uvc-rO-bGc" firstAttribute="top" secondItem="kYj-Rk-ftb" secondAttribute="top" id="dzq-pb-LWp"/>
+                            <constraint firstItem="CVK-vr-iF9" firstAttribute="leading" secondItem="E6T-kR-o6M" secondAttribute="trailing" constant="15" id="fZb-fI-jp1"/>
+                            <constraint firstItem="QYZ-2b-UBq" firstAttribute="bottom" secondItem="zMi-7V-krH" secondAttribute="bottom" constant="60" id="jVh-05-cK6"/>
+                            <constraint firstItem="sSm-Bt-WSB" firstAttribute="leading" secondItem="QYZ-2b-UBq" secondAttribute="leading" id="kGa-by-PJl"/>
+                            <constraint firstItem="uvc-rO-bGc" firstAttribute="leading" secondItem="kYj-Rk-ftb" secondAttribute="leading" id="mAq-6g-87e"/>
+                            <constraint firstItem="QYZ-2b-UBq" firstAttribute="trailing" secondItem="sSm-Bt-WSB" secondAttribute="trailing" id="nzF-rF-mCd"/>
+                            <constraint firstItem="CVK-vr-iF9" firstAttribute="centerY" secondItem="E6T-kR-o6M" secondAttribute="centerY" id="wug-Kv-M1G"/>
+                            <constraint firstItem="zMi-7V-krH" firstAttribute="leading" secondItem="QYZ-2b-UBq" secondAttribute="leading" constant="15" id="yPm-tk-Ysi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="sSm-Bt-WSB" id="d91-mc-EqY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="433"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_home_backdrop" width="375" height="667"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

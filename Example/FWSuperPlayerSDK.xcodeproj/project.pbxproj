@@ -173,6 +173,12 @@
 				CLASSPREFIX = FW;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = SailorGa;
+				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = RJ5C7D2C4E;
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "FWSuperPlayerSDK" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -343,12 +349,18 @@
 			baseConfigurationReference = 471364E3AAF0A731CA46A242 /* Pods-FWSuperPlayerSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RJ5C7D2C4E;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FWSuperPlayerSDK/FWSuperPlayerSDK-Prefix.pch";
 				INFOPLIST_FILE = "FWSuperPlayerSDK/FWSuperPlayerSDK-Info.plist";
+				MARKETING_VERSION = 1.0.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.seastart.playerdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = playerdemo_dev;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -359,12 +371,19 @@
 			baseConfigurationReference = B0E976EA1BABAEEB7DB02B8A /* Pods-FWSuperPlayerSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RJ5C7D2C4E;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FWSuperPlayerSDK/FWSuperPlayerSDK-Prefix.pch";
 				INFOPLIST_FILE = "FWSuperPlayerSDK/FWSuperPlayerSDK-Info.plist";
+				MARKETING_VERSION = 1.0.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.seastart.playerdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = playerdemo_appstore;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
