@@ -37,5 +37,5 @@ Pod::Spec.new do |s|
   s.ios.library = 'z', 'resolv', 'iconv', 'stdc++', 'c++', 'sqlite3'
   
   # 依赖本地Frameworks库
-  s.vendored_frameworks = 'FWSuperPlayerSDK/Classes/FWSuperPlayer.framework'
+  s.vendored_frameworks = 'FWSuperPlayer.framework'
 end
