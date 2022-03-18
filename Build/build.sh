@@ -85,7 +85,7 @@ TOTAL_COUNT=3
 
 while read LOG_LINE
 do
-	if [[ ${LOG_LINE} == "HTTP/1.1 200 OK\r\n" ]]; then
+	if [[ ${LOG_LINE} == "-> \"HTTP/1.1 200 OK\r\n\"" ]]; then
 		COUNT=`expr ${COUNT} + 1`
 	fi
 done < $ISSUE_LOG_FILE
