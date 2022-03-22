@@ -81,11 +81,11 @@ echo "#################### 正在发布 ####################"
 pod trunk push ${PODSPEC_PATH} --skip-import-validation --allow-warnings --use-libraries --verbose | tee ${ISSUE_LOG_FILE}
 
 COUNT=0
-TOTAL_COUNT=1
+TOTAL_COUNT=2
 
 while read LOG_LINE
 do
-	if [[ ${LOG_LINE} == "-> \"HTTP/1.1 200 OK\r\n\"" ]]; then
+	if [[ ${LOG_LINE} =~ "Push for \`${LIBRARY_NAME} ${OID_VERSION}' has been pushed" ]]; then
 		COUNT=`expr ${COUNT} + 1`
 	fi
 done < $ISSUE_LOG_FILE
